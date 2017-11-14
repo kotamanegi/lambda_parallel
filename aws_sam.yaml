@@ -1,0 +1,14 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  sexplore:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: .
+      Description: ''
+      MemorySize: 1536
+      Timeout: 30
+      Role: 'arn:aws:iam::227122787190:role/S3toLambda'
